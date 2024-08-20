@@ -15,12 +15,12 @@ import {
     storeOutList,
     toNano
 } from '@ton/core';
-// import { hex as CodeHex } from '../build/HighloadWalletV3.compiled.json';
+import { hex as CodeHex } from '../build/HighloadWalletV3.compiled.json';
 import {sign} from "ton-crypto";
 import {OP} from "../tests/imports/const";
 import {HighloadQueryId} from "./HighloadQueryId";
 
-// export const HighloadWalletV3Code = Cell.fromBoc(Buffer.from(CodeHex, "hex"))[0]
+export const HighloadWalletV3Code = Cell.fromBoc(Buffer.from(CodeHex, "hex"))[0]
 
 export type HighloadWalletV3Config = {
     publicKey: Buffer,
@@ -43,7 +43,7 @@ export function highloadWalletV3ConfigToCell(config: HighloadWalletV3Config): Ce
 
 export class HighloadWalletV3 implements Contract {
 
-    constructor(readonly address: Address, readonly init?: { code: Cell; data: Cell }) {
+    constructor(readonly address: Address, readonly init?: { code: Cell ; data: Cell }) {
     }
 
     static createFromAddress(address: Address) {

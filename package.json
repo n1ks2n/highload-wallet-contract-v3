@@ -20,5 +20,15 @@
         "ts-jest": "^29.0.5",
         "ts-node": "^10.9.1",
         "typescript": "^5.3.2"
+    },
+    "dependencies": {
+        "@orbs-network/ton-access": "^2.3.3",
+        "@ton-community/func-js": "^0.7.0",
+        "ton": "^13.9.0",
+        "ton-compiler": "^2.3.0",
+        "ton-core": "^0.53.0",
+        "ton-crypto": "^3.2.0",
+        "tonweb": "^0.0.66",
+        "tonweb-mnemonic": "^1.0.1"
     }
 }
